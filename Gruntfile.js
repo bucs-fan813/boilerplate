@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         concat: {
             options: { separator: ';\n' },
             build: {
-                src: ['assets/src/js/*.js'],
+                src: ['assets/src/js/jquery.js','assets/src/js/bootstrap.bundle.js','assets/src/js/jqBootstrapValidation.js','assets/src/js/*.js'],
                 dest: 'assets/dist/script.js'
             }
         },
