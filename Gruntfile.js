@@ -2,16 +2,16 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     concat: {
-      options: {
-        separator: ';\n'
-      },
       js: {
         src: ['assets/src/js/jquery.js', 'assets/src/js/bootstrap.bundle.js', 'assets/src/js/jqBootstrapValidation.js', 'assets/src/js/*.js'],
-        dest: 'assets/dist/script.js'
+        dest: 'assets/dist/script.js',
+        options: {
+          separator: ';\n'
+        }
       }
     },
     uglify: {
-      dist: {
+      js: {
         options: {
           //          sourceMap: true,
         },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
-      target: {
+      css: {
         files: {
           'assets/dist/style.min.css': ['assets/src/css/*.css']
         }
